@@ -28,7 +28,6 @@ def verify_slack_signing():
 
     if hmac.compare_digest(my_signature, slack_signature):
         # Request is now fully authenticated
-        # command = request.form.get('text', None)
         porg.on()
         time.sleep(1)
         porg.off()
